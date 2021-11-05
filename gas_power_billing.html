@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE> Domestic Gas  Supply Company</TITLE>
+<SCRIPT LANGUAGE = JavaScript>
+var Customerid =0
+var Usages=0
+var Owes =0
+var TotalCustomers=0
+var totalAmount=0
+Customerid= prompt("Enter Cutomer ID Except -1 and 0" , -1);
+
+while((Customerid != -1 )&&(Customerid  !=0)) {
+
+Usages     = prompt("Enter Cutomer usages" , "0");
+
+
+		if (Usages<=60) {
+			Owes= parseFloat(Usages)* 2.00
+
+				}
+						else{ 
+						Owes =60 *1.75+ parseFloat(Usages-60)*1.50 
+						}
+ 
+
+
+document.write("Customer ID: "+ Customerid +" has gas usage of  " + Usages + " and owes " + Owes);
+document.write("<br/>");
+TotalCustomers++;
+totalAmount = (Owes + totalAmount);
+		
+Customerid= prompt("Enter Cutomer ID Except -1 and 0 " , -1);
+
+   } 
+
+document.write("Total Amount of Customers is   " + TotalCustomers);
+document.write("<br/>");
+document.write("Total amount for all  customers is   " + totalAmount);
+
+
+</SCRIPT>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>
